@@ -1,3 +1,5 @@
+![image](https://github.com/TessierV/holbertonschool-interview/assets/113889290/fce8ab90-0c78-466b-b5e5-75902c9ac341)
+
 # Tasks
 Technical interview preparation:
 
@@ -5,8 +7,8 @@ You are not allowed to google anything
 Whiteboard first
 Write a function in C that inserts a number into a sorted singly linked list.
 
-Prototype: listint_t *insert_node(listint_t **head, int number);
-Return: the address of the new node, or NULL if it failed
+**Prototype**: `listint_t *insert_node(listint_t **head, int number)`;  
+**Return**:  the address of the new node, or NULL if it failed
 
 ## Script Test
 
@@ -38,8 +40,7 @@ listint_t *insert_node(listint_t **head, int number);
 
 #endif /* LISTS_H */```
 
-```
-carrie@ubuntu:$ cat linked_lists.c
+```carrie@ubuntu:$ cat linked_lists.c
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
@@ -116,8 +117,7 @@ void free_listint(listint_t *head)
 }
 ```
 
-```
-carrie@ubuntu:$ cat 0-main.c
+```carrie@ubuntu:$ cat 0-main.c
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
