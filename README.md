@@ -19,7 +19,12 @@ All your files must be executable
 ### Resume:
 You have n number of locked boxes in front of you. Each box is numbered sequentially from 0 to n - 1 and each box may contain keys to the other boxes.
 Write a method that determines if all the boxes can be opened. (python)
+<br><br>
 
-
+## 2- insert_in_sorted_linked_list  
+  
+### Resume:
+Write a function in C that inserts a number into a sorted singly linked list.  
+  
 <br/><hr>
 <p align="right">Holberton TOULOUSE</p>
