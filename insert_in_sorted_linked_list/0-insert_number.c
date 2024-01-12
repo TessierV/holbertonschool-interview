@@ -41,6 +41,11 @@ listint_t *insert_node(listint_t **head, int n)
         prev->next = newNode;
         newNode->next = current;
     }
+    if (current == *head && prev == NULL)
+    {
+        free(newNode);
+        return NULL;
+    }
 
     return (newNode);
 }
