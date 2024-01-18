@@ -19,7 +19,10 @@ heap_t *heap_insert(heap_t **root, int value)
         parent = (binary_tree_height(parent->left) <= binary_tree_height(parent->right)) ? parent->left : parent->right;
 
     new_node->parent = parent;
-    (parent->left) ? (parent->right = new_node) : (parent->left = new_node);
+    if (parent->left)
+        parent->right = new_node;
+    else
+        parent->left = new_node;
 
     heapify_up(new_node);
 
@@ -41,5 +44,10 @@ int binary_tree_height(const binary_tree_t *tree)
 void heapify_up(binary_tree_t *node)
 {
     while (node->parent && node->n > node->parent->n)
-        node->n ^= node->parent->n, node->parent->n ^= node->n, node->n ^= node->parent->n, node = node->parent;
+    {
+        int temp = node->n;
+        node->n = node->parent->n;
+        node->parent->n = temp;
+        node = node->parent;
+    }
 }
