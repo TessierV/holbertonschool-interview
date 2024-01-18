@@ -38,6 +38,10 @@ int binary_tree_height(const binary_tree_t *tree);
 void heapify_up(binary_tree_t *node);
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
+
+typedef struct binary_tree_s heap_t;
+binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 heap_t *heap_insert(heap_t **root, int value);
+size_t binary_tree_size(const binary_tree_t *tree);
 
 #endif
