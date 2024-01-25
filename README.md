@@ -16,15 +16,28 @@ All your files must be executable
   
 ## 1 - Lockboxes
   
-### Resume:
+### Resume :
 You have n number of locked boxes in front of you. Each box is numbered sequentially from 0 to n - 1 and each box may contain keys to the other boxes.
 Write a method that determines if all the boxes can be opened. (python)
 <br><br>
 
 ## 2- insert_in_sorted_linked_list  
   
-### Resume:
-Write a function in C that inserts a number into a sorted singly linked list.  
+### Resume :
+Write a function in C that inserts a number into a sorted singly linked list.
+<br><br>
+
+## 3- heap_insert
+
+### Resume :
+Welcome to the "Heap Insert" project, an amateur-level exploration guided by Alexa Orrico, Software Engineer at Holberton School. This project focuses on implementing a Max Binary Heap using C programming language. The primary goal is to create functions that allow the insertion of nodes into the heap while maintaining the Max Heap ordering.
+<br><br>
+
+## 4- minimum_operation
+
+### Resume :
+In this exercise, the goal is to calculate the fewest number of operations needed to obtain exactly n occurrences of the character 'H' in a text file. The text editor can perform only two operations: Copy All and Paste. The challenge is to be efficient in utilizing these operations to achieve the desired count of 'H'.
+<br><br>
   
 <br/><hr>
 <p align="right">Holberton TOULOUSE</p>
