@@ -38,6 +38,12 @@ Welcome to the "Heap Insert" project, an amateur-level exploration guided by Ale
 ### Resume :
 In this exercise, the goal is to calculate the fewest number of operations needed to obtain exactly n occurrences of the character 'H' in a text file. The text editor can perform only two operations: Copy All and Paste. The challenge is to be efficient in utilizing these operations to achieve the desired count of 'H'.
 <br><br>
-  
+
+## 5- Sandpiles
+
+### Resume :
+The "Sandpiles" project aims to implement a C function to add two sandpiles (3x3 grids). Each element of the grid represents the number of sand grains in that cell. Adding the sandpiles must be done according to specific rules, and the final result should be a stable sandpile.
+<br><br>
+ 
 <br/><hr>
 <p align="right">Holberton TOULOUSE</p>
