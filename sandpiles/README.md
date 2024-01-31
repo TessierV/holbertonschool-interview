@@ -1,47 +1,164 @@
-![image](https://github.com/TessierV/holbertonschool-interview/assets/113889290/d637fafc-835a-48c1-b03e-46e7baec8b08)
+![image](https://github.com/TessierV/holbertonschool-interview/assets/113889290/a73d2030-c806-4241-ac64-a31c8b32012b)
 
+# Overview
+
+The "Sandpiles" project aims to implement a C function to add two sandpiles (3x3 grids). Each element of the grid represents the number of sand grains in that cell. Adding the sandpiles must be done according to specific rules, and the final result should be a stable sandpile.
 
 # Tasks
 
-You have n number of locked boxes in front of you. Each box is numbered sequentially from 0 to n - 1 and each box may contain keys to the other boxes.
+Write a function that computes the sum of two sandpiles
 
-Write a method that determines if all the boxes can be opened.
-
-Prototype: def canUnlockAll(boxes)
-boxes is a list of lists
-A key with the same number as a box opens that box
-You can assume all keys will be positive integers
-There can be keys that do not have boxes
-The first box boxes[0] is unlocked
-Return True if all boxes can be opened, else return False
-
+Prototype: `void sandpiles_sum(int grid1[3][3], int grid2[3][3]);`
+You can assume that both grid1 and grid2 are individually stable
+A sandpile is considered stable when none of its cells contains more than 3 grains
+When your function is done, grid1 must be stable
+grid1 must be printed before each toppling round, only if it is unstable (See example)
+You’re not allowed to allocate memory dynamically
 
 ## Script Test
 
-```python
-#!/usr/bin/python3
+```alex@~/sandpiles$ cat 0-main.c 
+#include <stdlib.h>
+#include <stdio.h>
 
-canUnlockAll = __import__('0-lockboxes').canUnlockAll
+#include "sandpiles.h"
 
-boxes = [[1], [2], [3], [4], []]
-print(canUnlockAll(boxes))
+/**
+ * print_grid_sum - Print 3x3 grids sum
+ * @grid1: Left 3x3 grid
+ * @grid2: Right 3x3 grid
+ *
+ */
+static void print_grid_sum(int grid1[3][3], int grid2[3][3])
+{
+    int i, j;
 
-boxes = [[1, 4, 6], [2], [0, 4, 1], [5, 6, 2], [3], [4, 1], [6]]
-print(canUnlockAll(boxes))
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            if (j)
+                printf(" ");
+            printf("%d", grid1[i][j]);
+        }
 
-boxes = [[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
-print(canUnlockAll(boxes))
+        printf(" %c ", (i == 1 ? '+' : ' '));
+
+        for (j = 0; j < 3; j++)
+        {
+            if (j)
+                printf(" ");
+            printf("%d", grid2[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+/**
+ * print_grid - Print 3x3 grid
+ * @grid: 3x3 grid
+ *
+ */
+static void print_grid(int grid[3][3])
+{
+    int i, j;
+
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            if (j)
+                printf(" ");
+            printf("%d", grid[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+/**
+ * main - Entry point
+ *
+ * Return: EXIT_SUCCESS or EXIT_FAILURE
+ */
+int main(void)
+{
+    int grid1[3][3] = {
+        {3, 3, 3},
+        {3, 3, 3},
+        {3, 3, 3}
+    };
+    int grid2[3][3] = {
+        {1, 3, 1},
+        {3, 3, 3},
+        {1, 3, 1}
+    };
+
+    print_grid_sum(grid1, grid2);
+
+    sandpiles_sum(grid1, grid2);
+
+    printf("=\n");
+    print_grid(grid1);
+
+    return (EXIT_SUCCESS);
+}
+
 ```
     
 
 ## Result Expected
 
-```carrie@ubuntu:~/lockboxes$
-carrie@ubuntu:~/lockboxes$ ./main_0.py
-True
-True
-False
-carrie@ubuntu:~/lockboxes$
+```alex@~/sandpiles$ gcc -Wall -Wextra -Werror -pedantic 0-main.c 0-sandpiles.c -o 0-sandpiles
+alex@~/sandpiles$ ./0-sandpiles 
+3 3 3   1 3 1
+3 3 3 + 3 3 3
+3 3 3   1 3 1
+=
+4 6 4
+6 6 6
+4 6 4
+=
+2 5 2
+5 6 5
+2 5 2
+=
+4 2 4
+2 6 2
+4 2 4
+=
+0 5 0
+5 2 5
+0 5 0
+=
+2 1 2
+1 6 1
+2 1 2
+=
+2 2 2
+2 2 2
+2 2 2
+alex@~/sandpiles$ cat 1-main.c
+Same as 0-main.c except:
+int grid1[3][3] = {
+        {0, 0, 0},
+        {0, 0, 0},
+        {0, 0, 0}
+    };
+    int grid2[3][3] = {
+        {3, 3, 3},
+        {3, 3, 3},
+        {3, 3, 3}
+    };
+alex@~/sandpiles$ gcc -Wall -Wextra -Werror -pedantic 1-main.c 0-sandpiles.c -o 0-sandpiles
+alex@~/sandpiles$ ./0-sandpiles 
+0 0 0   3 3 3
+0 0 0 + 3 3 3
+0 0 0   3 3 3
+=
+3 3 3
+3 3 3
+3 3 3
+alex@~/sandpiles$
 ```
 
 
