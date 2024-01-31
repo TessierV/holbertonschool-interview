@@ -85,7 +85,7 @@ static void converting_into_sandpiles(int grid1[3][3])
                 if ((j - 1 >= 0) && (j - 1 <3 ))
                     grid_count[i][j - 1] += 1;
                 if ((j + 1 >= 0) && (j + 1 < 3))
-					grid_count[i][j + 1] += 1;
+                    grid_count[i][j + 1] += 1;
             }
         }
     }
