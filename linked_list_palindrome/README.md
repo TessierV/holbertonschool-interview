@@ -1,4 +1,4 @@
-# Linked List Palindrome Checker
+![image](https://github.com/TessierV/holbertonschool-interview/assets/113889290/77d6405d-c44b-4801-9a30-93519db5cf17)
 
 ## Overview
 This project focuses on implementing a function in C that checks if a singly linked list is a palindrome. The linked list is represented by a custom structure (listint_t) containing an integer (n) and a pointer to the next node.
@@ -6,16 +6,15 @@ This project focuses on implementing a function in C that checks if a singly lin
 ## Tasks
 Write a function in C that checks if a singly linked list is a palindrome.
 
-Prototype: int is_palindrome(listint_t **head);
-Return: 0 if it is not a palindrome, 1 if it is a palindrome
+- Prototype: `int is_palindrome(listint_t **head);`  
+- Return: 0 if it is not a palindrome, 1 if it is a palindrome
 An empty list is considered a palindrome
 
-### Script Test
+## Script
 
-lists.h
+- lists.h
 
-```
-#ifndef LISTS_H
+```#ifndef LISTS_H
 #define LISTS_H
 
 /**
@@ -38,9 +37,11 @@ void free_listint(listint_t *head);
 
 int is_palindrome(listint_t **head);
 
-#endif /* LISTS_H */```
+#endif /* LISTS_H */
 
-linked_lists.c
+```
+
+- linked_lists.c
 
 ```#include <stdio.h>
 #include <stdlib.h>
@@ -115,13 +116,55 @@ void free_listint(listint_t *head)
         head = head->next;
         free(current);
     }
-}```
+}
 
-gcc
+```
+
+## Script Test 
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include "lists.h"
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint_end(&head, 1);
+    add_nodeint_end(&head, 17);
+    add_nodeint_end(&head, 972);
+    add_nodeint_end(&head, 50);
+    add_nodeint_end(&head, 98);
+    add_nodeint_end(&head, 98);
+    add_nodeint_end(&head, 50);
+    add_nodeint_end(&head, 972);
+    add_nodeint_end(&head, 17);
+    add_nodeint_end(&head, 1);
+    print_listint(head);
+
+    if (is_palindrome(&head) == 1)
+        printf("Linked list is a palindrome\n");
+    else
+        printf("Linked list is not a palindrome\n");
+
+    free_listint(head);
+
+    return (0);
+}
+
+```
+
+## gcc
 
 ```gcc -Wall -Werror -Wextra -pedantic 0-main.c linked_lists.c 0-is_palindrome.c -o palindrome```
 
-### Result Expected
+## Result Expected
 
 ```
 ./palindrome
@@ -135,4 +178,9 @@ gcc
 972
 17
 1
-Linked list is a palindrome```
+Linked list is a palindrome
+
+```
+
+<br/><hr>
+<p align="right">Holberton TOULOUSE</p>
