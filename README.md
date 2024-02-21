@@ -2,7 +2,7 @@
 
 
 ## Requirements
-  
+
 General
 Allowed editors: vi, vim, emacs
 All your files will be interpreted/compiled on Ubuntu 14.04 LTS using python3 (version 3.4.3)
@@ -12,17 +12,17 @@ A README.md file, at the root of the folder of the project, is mandatory
 Your code should be documented
 Your code should use the PEP 8 style (version 1.7.x)
 All your files must be executable
-<br><br>  
-  
+<br><br>
+
 ## 1 - Lockboxes
-  
+
 ### Resume :
 You have n number of locked boxes in front of you. Each box is numbered sequentially from 0 to n - 1 and each box may contain keys to the other boxes.
 Write a method that determines if all the boxes can be opened. (python)
 <br><br>
 
-## 2- insert_in_sorted_linked_list  
-  
+## 2- insert_in_sorted_linked_list
+
 ### Resume :
 Write a function in C that inserts a number into a sorted singly linked list.
 <br><br>
@@ -44,6 +44,12 @@ In this exercise, the goal is to calculate the fewest number of operations neede
 ### Resume :
 The "Sandpiles" project aims to implement a C function to add two sandpiles (3x3 grids). Each element of the grid represents the number of sand grains in that cell. Adding the sandpiles must be done according to specific rules, and the final result should be a stable sandpile.
 <br><br>
- 
+
+## 6- Linked list cycle
+
+### Resume :
+The project involves developing a function in the C language to detect the presence of a cycle in a singly linked list. The check_cycle function takes a pointer to the beginning of the list as input and returns 0 if the list has no cycle, and 1 if a cycle is detected.
+<br><br>
+
 <br/><hr>
 <p align="right">Holberton TOULOUSE</p>
