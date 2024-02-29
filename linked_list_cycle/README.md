@@ -1,3 +1,4 @@
+![image](https://github.com/TessierV/holbertonschool-interview/assets/113889290/2a789275-2745-4318-8fb8-cbada67ab6e4)
 
 This project implements a function in C to detect the presence of a cycle in a singly linked list. The check_cycle function takes a pointer to the beginning of the list as input and returns 0 if the list has no cycle, and 1 if a cycle is detected.
 
