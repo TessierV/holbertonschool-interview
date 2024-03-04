@@ -51,5 +51,16 @@ The "Sandpiles" project aims to implement a C function to add two sandpiles (3x3
 The project involves developing a function in the C language to detect the presence of a cycle in a singly linked list. The check_cycle function takes a pointer to the beginning of the list as input and returns 0 if the list has no cycle, and 1 if a cycle is detected.
 <br><br>
 
+## 7- Palindrome integer
+
+### Resume:
+This project focuses on creating a C program that checks whether a given unsigned integer is a palindrome or not. A palindrome is a number that remains the same when its digits are reversed.
+<br><br>
+
+## 8- UTF - 8 validation
+
+### Resume :
+This project focuses on implementing a method, validUTF8, that determines whether a given data set represents a valid UTF-8 encoding. UTF-8 is a character encoding capable of representing all possible characters, or code points, in Unicode. The goal is to validate whether a sequence of bytes, represented as a list of integers, adheres to the rules of UTF-8 encoding.
 <br/><hr>
+
 <p align="right">Holberton TOULOUSE</p>
