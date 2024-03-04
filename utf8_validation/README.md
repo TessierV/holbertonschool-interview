@@ -1,9 +1,11 @@
+![image](https://github.com/TessierV/holbertonschool-interview/assets/113889290/5a74f781-d1a1-4ba7-9ce4-100ff0aa69bd)
+
 # Overview
 This project focuses on implementing a method, validUTF8, that determines whether a given data set represents a valid UTF-8 encoding. UTF-8 is a character encoding capable of representing all possible characters, or code points, in Unicode. The goal is to validate whether a sequence of bytes, represented as a list of integers, adheres to the rules of UTF-8 encoding.
 
 # Test
 
-``#!/usr/bin/python3
+```#!/usr/bin/python3
 """
 Main file for testing
 """
@@ -18,12 +20,12 @@ print(validUTF8(data))
 
 data = [229, 65, 127, 256]
 print(validUTF8(data))
-``
+```
 
 # Result
-``
+```
 True
 True
 False
-``
+```
 
