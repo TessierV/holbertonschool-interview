@@ -1,4 +1,4 @@
-# Palindrome Integer
+![image](https://github.com/TessierV/holbertonschool-interview/assets/113889290/7f279234-5b3d-4ade-98f0-326bb4b8b601)
 
 ## Overview
 This project focuses on creating a C program that checks whether a given unsigned integer is a palindrome or not. A palindrome is a number that remains the same when its digits are reversed.
