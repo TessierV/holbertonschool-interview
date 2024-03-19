@@ -33,7 +33,7 @@ int slide_line(int *line, size_t size, int direction)
                     break;
                 }
             }
-            line[i - (i > 0 ? 1 : 0)] = current;
+            line[(i > 0 ? i - 1 : i)] = current;
         }
         else
         {
@@ -50,7 +50,7 @@ int slide_line(int *line, size_t size, int direction)
                     break;
                 }
             }
-            line[i + ((i < size - 1) ? 1 : 0)] = current;
+            line[(i < size - 1 ? i + 1 : i)] = current;
         }
     }
 
