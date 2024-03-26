@@ -10,8 +10,19 @@
 
 char check_char(int column, int row)
 {
-    return (column && row ? (column % 3 == 1 && row % 3 == 1 ? ' ' : '#') : '#');
+    if (column && row)
+    {
+        if (column % 3 == 1 && row % 3 == 1)
+            return (' ');
+        else
+            return ('#');
+    }
+    else
+    {
+        return ('#');
+    }
 }
+
 
 /**
  * menger - Function that draws a 2D Menger Sponge.
@@ -23,6 +34,9 @@ char check_char(int column, int row)
 void menger(int level)
 {
     int size, i, j;
+
+    if (level < 0)
+        return;
 
     size = pow(3, level);
     for (i = 0; i < size; i++)
