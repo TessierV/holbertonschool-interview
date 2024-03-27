@@ -5,13 +5,14 @@
 #include <math.h>
 
 /**
- * check_char
+ * header - Function
+ * @level: Is the level of the Menger Sponge to draw.
+ *
+ * Return: Void.
  */
 char check_char(int column, int row);
 
-/**
- * menger
- */
+
 void menger(int level);
 
 #endif
