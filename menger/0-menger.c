@@ -7,22 +7,17 @@
  *
  * Return: # or space.
  */
-
 char check_char(int column, int row)
 {
-    if (column && row)
+    while (column > 0 || row > 0)
     {
         if (column % 3 == 1 && row % 3 == 1)
             return (' ');
-        else
-            return ('#');
+        column /= 3;
+        row /= 3;
     }
-    else
-    {
-        return ('#');
-    }
+    return ('#');
 }
-
 
 /**
  * menger - Function that draws a 2D Menger Sponge.
@@ -30,7 +25,6 @@ char check_char(int column, int row)
  *
  * Return: Void.
  */
-
 void menger(int level)
 {
     int size, i, j;
