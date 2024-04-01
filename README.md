@@ -61,6 +61,26 @@ This project focuses on creating a C program that checks whether a given unsigne
 
 ### Resume :
 This project focuses on implementing a method, validUTF8, that determines whether a given data set represents a valid UTF-8 encoding. UTF-8 is a character encoding capable of representing all possible characters, or code points, in Unicode. The goal is to validate whether a sequence of bytes, represented as a list of integers, adheres to the rules of UTF-8 encoding.
-<br/><hr>
+<br><br>
 
+## 9- 2048 (single line)
+
+### Resume :
+This project implements the mechanics of the 2048 game for a single horizontal line. The goal is to be able to slide and merge numbers on this line in either left or right directions. Identical numbers, if contiguous or separated by zeros, should be merged.
+<br><br>
+
+## 10- Menger sponge
+
+### Resume :
+This program draws a 2D representation of the Menger sponge based on the provided level. It uses the '#' character to represent filled blocks and space character (' ') to represent empty space.
+<br><br>
+
+## 11- nqueens
+
+### Resume :
+The N Queens problem is the challenge of placing N non-attacking queens on an N×N chessboard. This program provides a solution to the N Queens problem using backtracking algorithm.
+<br><br>
+
+
+<br/><hr>
 <p align="right">Holberton TOULOUSE</p>
