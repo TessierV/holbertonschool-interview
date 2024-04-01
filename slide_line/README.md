@@ -1,3 +1,4 @@
+![image](https://github.com/TessierV/holbertonschool-interview/assets/113889290/d3363ec8-8d02-44b4-94eb-1d72e19a323e)
 
 # Overview
 

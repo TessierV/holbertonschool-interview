@@ -1,4 +1,5 @@
-# 2D Menger Sponge
+![image](https://github.com/TessierV/holbertonschool-interview/assets/113889290/dfeb46b7-f431-474b-86af-28716e119b25)
+
 
 ## Description
 The Menger sponge is a fractal structure that extends the concept of the one-dimensional Cantor set and two-dimensional Sierpinski carpet to three dimensions. It is named after Karl Menger, who first described it in 1926.
