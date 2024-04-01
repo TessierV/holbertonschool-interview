@@ -8,14 +8,15 @@ def is_safe(coords, row, col):
     rows = []
     cols = []
     diag_r = []
+    diag_l = []
 
     for r, c in coords:
         rows.append(r)
         cols.append(c)
         diag_r.append(r + c)
+        diag_l.append(r - c)
 
-
-    if row in rows or col in cols or (row + col) in diag_r:
+    if row in rows or col in cols or (row + col) in diag_r or (row - col) in diag_l:
         return False
     return True
 
