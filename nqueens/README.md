@@ -1,3 +1,4 @@
+![image](https://github.com/TessierV/holbertonschool-interview/assets/113889290/1fd5c1a2-d0a5-4451-9a07-3b726fe57381)
 
 ## Overview
 The N Queens problem is the challenge of placing N non-attacking queens on an N×N chessboard. This program provides a solution to the N Queens problem using backtracking algorithm.
