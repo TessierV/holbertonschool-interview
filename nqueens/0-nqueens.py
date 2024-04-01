@@ -16,8 +16,12 @@ def is_safe(coords, row, col):
         diag_r.append(r + c)
         diag_l.append(r - c)
 
-    if row in rows or col in cols or (row + col) in diag_r or (row - col) in diag_l:
+    if row in rows or col in cols:
         return False
+
+    if (row + col) in diag_r or (row - col) in diag_l:
+        return False
+
     return True
 
 
