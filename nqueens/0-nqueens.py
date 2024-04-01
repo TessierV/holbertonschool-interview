@@ -1,19 +1,24 @@
 #!/usr/bin/python3
 import sys
 
+
 def is_safe(coords, row, col):
     """ queens puzzle is the challenge
     """
     rows = []
     cols = []
+    diag_r = []
 
     for r, c in coords:
         rows.append(r)
         cols.append(c)
+        diag_r.append(r + c)
 
-    if row in rows or col in cols or (row + col):
+
+    if row in rows or col in cols or (row + col) in diag_r:
         return False
     return True
+
 
 def solve_n_queens_util(coords, row, N):
     if row == N:
@@ -28,6 +33,7 @@ def solve_n_queens_util(coords, row, N):
             coords.pop()
 
     return res
+
 
 def solve_n_queens(N):
     if N < 4:
