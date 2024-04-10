@@ -31,7 +31,7 @@ avl_t *binary_search(int *array, int start, int end, avl_t *parent)
 }
 
 /**
- * sorted_array_to_avl
+ * sorted_array_to_avl - Sorted array to avel function
  * @array: is a pointer
  * @size: is the number of element in the array
  * Return: a pointer or NULL
