@@ -16,26 +16,46 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 {
 	if (!list)
 		return (NULL);
+
 	skiplist_t *newNode = list, *express = list->express, *last = newNode;
 
-	while (express && express->n < value)
+	while (express != NULL && express->n < value)
 	{
 		printf(CHECKED_VALUE, express->index, express->n);
 		newNode = express;
 		express = express->express;
 	}
-	printf(FOUND_BETWEEN_INDEXES, newNode->index, (express ? express->index : last->index));
 
-	while (newNode && newNode->n < value)
+	if (express != NULL)
+	{
+		printf(CHECKED_VALUE, express->index, express->n);
+	}
+	else
+	{
+		last = newNode;
+		while (last->next != NULL)
+			last = last->next;
+	}
+
+	if (express != NULL)
+	{
+		printf(FOUND_BETWEEN_INDEXES, newNode->index, express->index);
+	}
+	else
+	{
+		printf(FOUND_BETWEEN_INDEXES, newNode->index, last->index);
+	}
+
+	while (newNode != NULL && newNode->n < value)
 	{
 		printf(CHECKED_VALUE, newNode->index, newNode->n);
 		newNode = newNode->next;
 	}
 
-	if (newNode && newNode->n == value)
+	if (newNode != NULL && newNode->n == value)
 	{
 		printf(CHECKED_VALUE, newNode->index, newNode->n);
-		return (newNode);
+		return newNode;
 	}
 	return (NULL);
 }
