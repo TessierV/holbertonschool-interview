@@ -5,17 +5,17 @@
 #define FOUND_BETWEEN_INDEXES "Value found between indexes [%lu] and [%lu]\n"
 
 /**
- * linear_skip - searches for a specific value in an express-powered linked list
+ * linear_skip - searches for a specific value
  * @list: pointer to the head of the skip list
  * @value: value to search for
  *
- * Return: pointer to the node containing the value, or NULL if not found
+ * Return: pointer to the node containing the value, or NULL
  */
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
     skiplist_t *start = NULL, *end = NULL;
 
-    /* Check if the list is valid and the value is in the search range */
+    /* Check if the list is valid */
     if (!list || list->n > value)
         return NULL;
 
