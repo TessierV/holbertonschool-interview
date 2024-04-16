@@ -17,7 +17,9 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 
     /* Check if the list is valid and the value is in the search range */
 	if (!list || list->n > value)
+	{
 		return NULL;
+	}
 
 	/* Traverse the list until the value is exceeded */
 	while (list->express && list->express->n < value)
@@ -35,9 +37,10 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	{
 		printf(CHECKED_VALUE, list->index, list->n);
 		if (list->n == value)
+		{
 			return list;
+		}
 		list = list->next;
 	}
 	return NULL;
 }
-
