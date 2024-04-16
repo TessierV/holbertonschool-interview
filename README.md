@@ -78,6 +78,17 @@ This program draws a 2D representation of the Menger sponge based on the provide
 The N Queens problem is the challenge of placing N non-attacking queens on an N×N chessboard. This program provides a solution to the N Queens problem using backtracking algorithm.
 <br><br>
 
+## 12- Array to AVL
+
+### Resume :
+The task presented here, "Array to AVL", requires writing a function that constructs an AVL (Adelson-Velsky and Landis) tree from a sorted array of integers. The AVL tree is a self-balancing binary search tree where the heights of the two child subtrees of any node differ by at most one. The function takes an array of integers and its size as input and returns a pointer to the root node of the constructed AVL tree.
+<br><br>
+
+## 13- Linear Search in Skip List
+
+### Resume :
+This program implements a linear search algorithm in a skip list data structure. The skip list is a linked list with an "express lane" that allows for faster searching of elements.
+<br><br>
 
 <br/><hr>
 <p align="right">Holberton TOULOUSE</p>
