@@ -13,34 +13,34 @@
  */
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
-    skiplist_t *start = NULL, *end = NULL;
+  skiplist_t *start = NULL, *end = NULL;
 
-    /* Check if the list is valid */
-    if (!list || list->n > value)
-        return NULL;
-
-    /* Traverse the list until the value is exceeded */
-    while (list->express && list->express->n < value)
-    {
-        printf(CHECKED_VALUE, list->express->index, list->express->n);
-        list = list->express;
-    }
-
-    /* Store the start and end indices of the search */
-    start = list;
-    end = list->express ? list->express : list;
-
-    /* Print the start and end indices of the search */
-    printf(FOUND_BETWEEN_INDEXES, start->index, end->index);
-
-    /* Linear search within the search range */
-    while (list && list->n <= value)
-    {
-        printf(CHECKED_VALUE, list->index, list->n);
-        if (list->n == value)
-            return list;
-        list = list->next;
-    }
-
+  /* Check if the list is valid */
+  if (!list || list->n > value)
     return NULL;
+
+  /* Traverse the list until the value is exceeded */
+  while (list->express && list->express->n < value)
+  {
+    printf(CHECKED_VALUE, list->express->index, list->express->n);
+    list = list->express;
+  }
+
+  /* Store the start and end indices of the search */
+  start = list;
+  end = list->express ? list->express : list;
+
+  /* Print the start and end indices of the search */
+  printf(FOUND_BETWEEN_INDEXES, start->index, end->index);
+
+  /* Linear search within the search range */
+  while (list && list->n <= value)
+  {
+    printf(CHECKED_VALUE, list->index, list->n);
+    if (list->n == value)
+      return list;
+    list = list->next;
+  }
+
+  return NULL;
 }
