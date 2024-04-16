@@ -5,40 +5,48 @@
 #define FOUND_BETWEEN_INDEXES "Value found between indexes [%lu] and [%lu]\n"
 
 /**
- * linear_skip - searches for a specific value
- * @list: pointer to the head of the skip list
- * @value: value to search for
+ * linear_skip - Searches for a value in a sorted skip list.
+ * @list: A pointer to the head of the skip list.
+ * @value: The value to search for.
  *
- * Return: pointer to the node containing the value, or NULL if not found
+ * Return: A pointer
+ * or NULL if value is not present or list is NULL.
  */
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
-	skiplist_t *start = NULL, *end = NULL;
-
-	/* Check if the list is valid and the value is in the search range */
-	if (!list || list->n > value)
-	{
+	if (!list)
 		return (NULL);
+
+	skiplist_t *newNode = list, *express = list->express, *last = newNode;
+	while (express != NULL && express->n < value)
+	{
+		printf(CHECKED_VALUE, express->index, express->n);
+		newNode = express;
+		express = express->express;
 	}
 
-	while (list->express && list->express->n < value)
+	if (express != NULL)
 	{
-		printf(CHECKED_VALUE, list->express->index, list->express->n);
-		list = list->express;
+		printf(CHECKED_VALUE, express->index, express->n);
 	}
-	/* Store the start and end indices of the search */
-	start = list;
-	end = list->express ? list->express : list;
-	printf(FOUND_BETWEEN_INDEXES, start->index, end->index);
-	/* Linear search within the search range */
-	while (list && list->n <= value)
+	else
 	{
-		printf(CHECKED_VALUE, list->index, list->n);
-		if (list->n == value)
-		{
-			return (list);
-		}
-		list = list->next;
+		last = newNode;
+		while (last->next != NULL)
+			last = last->next;
+		printf(CHECKED_VALUE, last->index, last->n);
+	}
+	printf(FOUND_BETWEEN_INDEXES,
+			newNode->index, (express ? express->index : last->index));
+	while (newNode != NULL && newNode->n < value)
+	{
+		printf(CHECKED_VALUE, newNode->index, newNode->n);
+		newNode = newNode->next;
+	}
+	if (newNode != NULL && newNode->n == value)
+	{
+		printf(CHECKED_VALUE, newNode->index, newNode->n);
+		return (newNode);
 	}
 	return (NULL);
 }
