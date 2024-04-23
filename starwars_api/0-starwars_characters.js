@@ -5,11 +5,12 @@ const movieId = process.argv[2];
 
 const url = `https://swapi-api.hbtn.io/api/films/${movieId}/`;
 
-function getCharacterName(url) {
+function getCharacterName (url) {
   return new Promise((resolve, reject) => {
     request(url, { json: true }, (error, response, body) => {
-      error ? reject(error) :
-      (response.statusCode !== 200) ? reject(new Error(`Failed to get character data: ${response.statusCode}`)) : resolve(body.name);
+      error
+        ? reject(error)
+        : (response.statusCode !== 200) ? reject(new Error(`Failed to get character data: ${response.statusCode}`)) : resolve(body.name);
     });
   });
 }
