@@ -90,5 +90,19 @@ The task presented here, "Array to AVL", requires writing a function that constr
 This program implements a linear search algorithm in a skip list data structure. The skip list is a linked list with an "express lane" that allows for faster searching of elements.
 <br><br>
 
+## 14- Star Wars API - Amateur
+
+## Resume :
+This project is a Command Line Interface (CLI) application that utilizes the Star Wars API to display characters from a specific film. The Star Wars API provides data about films, characters, planets, spaceships, and much more from the Star Wars universe.
+
+The goal of this project is to create a Node.js script that takes the ID of a Star Wars film as input and displays the names of the characters appearing in that film.
+<br><br>
+
+## 15- Rain Based on Walls
+
+## Resume :
+This Python script calculates the amount of water retained after it rains, based on a given list of non-negative integers representing walls of width 1.
+<br><br>
+
 <br/><hr>
 <p align="right">Holberton TOULOUSE</p>
