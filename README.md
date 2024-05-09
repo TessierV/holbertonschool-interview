@@ -104,5 +104,11 @@ The goal of this project is to create a Node.js script that takes the ID of a St
 This Python script calculates the amount of water retained after it rains, based on a given list of non-negative integers representing walls of width 1.
 <br><br>
 
+## 16- Heap Sort
+
+## Resume :
+Heap Sort is a sorting algorithm that works by transforming an array into a data structure called a heap, then repeatedly extracting the root element of the heap (which is the maximum in the case of a max heap or the minimum in the case of a min heap) and rebuilding the heap. Here's an outline of the algorithm
+<br><br>
+
 <br/><hr>
 <p align="right">Holberton TOULOUSE</p>
