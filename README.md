@@ -110,5 +110,12 @@ This Python script calculates the amount of water retained after it rains, based
 Heap Sort is a sorting algorithm that works by transforming an array into a data structure called a heap, then repeatedly extracting the root element of the heap (which is the maximum in the case of a max heap or the minimum in the case of a min heap) and rebuilding the heap. Here's an outline of the algorithm
 <br><br>
 
+## 17- Advanced Binary Search
+
+# Resume :
+This project implements an advanced binary search algorithm in C. The advanced_binary function searches for a value in a sorted array of integers and returns the index where the value is located. The algorithm uses recursion to perform the search efficiently.
+<br><br>
+
+
 <br/><hr>
 <p align="right">Holberton TOULOUSE</p>
