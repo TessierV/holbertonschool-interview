@@ -116,6 +116,11 @@ Heap Sort is a sorting algorithm that works by transforming an array into a data
 This project implements an advanced binary search algorithm in C. The advanced_binary function searches for a value in a sorted array of integers and returns the index where the value is located. The algorithm uses recursion to perform the search efficiently.
 <br><br>
 
+# 18- Count it!
+
+## Resume :
+This project involves creating a recursive function that queries the Reddit API, parses the titles of all hot articles, and prints a sorted count of given keywords (case-insensitive, delimited by spaces). For example, "Javascript" should count as "javascript", but "java" should not count as "javascript".
+<br><br>
 
 <br/><hr>
 <p align="right">Holberton TOULOUSE</p>
