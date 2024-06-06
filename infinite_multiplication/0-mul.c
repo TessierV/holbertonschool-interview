@@ -9,15 +9,9 @@
  *
  * Return: 1 if the string is composed only of digits, 0 otherwise
  */
-int is_digit(char *s)
+int is_digit(char s)
 {
-    int i;
-    for (i = 0; s[i]; i++)
-    {
-        if (!isdigit(s[i]))
-            return (0);
-    }
-    return (1);
+    return (s >= '0' && s <= '9');
 }
 
 /**
