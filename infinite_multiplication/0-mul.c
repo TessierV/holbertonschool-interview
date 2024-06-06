@@ -7,11 +7,12 @@
  * is_digit - checks if a string consists only of digits
  * @s: string to check
  *
- * Return: 1 if the string is composed only of digits
+ * Return: 1 if the string is composed only of digits, 0 otherwise
  */
 int is_digit(char *s)
 {
-    for (int i = 0; s[i]; i++)
+    int i;
+    for (i = 0; s[i]; i++)
     {
         if (!isdigit(s[i]))
             return (0);
@@ -20,20 +21,21 @@ int is_digit(char *s)
 }
 
 /**
- * multiply - two numbers represented as strings
+ * multiply - multiplies two numbers represented as strings
  * @num1: first number
  * @num2: second number
  */
 void multiply(char *num1, char *num2)
 {
-    int len_numb1 = strlen(num1);
-    int len_numb2 = strlen(num2);
-    int len_result = len_numb1 + len_numb2;
+    int len_num1 = strlen(num1);
+    int len_num2 = strlen(num2);
+    int len_result = len_num1 + len_num2;
     int *result = calloc(len_result, sizeof(int));
+    int i, j;
 
-    for (int i = len_numb1 - 1; i >= 0; i--)
+    for (i = len_num1 - 1; i >= 0; i--)
     {
-        for (int j = len_numb2 - 1; j >= 0; j--)
+        for (j = len_num2 - 1; j >= 0; j--)
         {
             int mul = (num1[i] - '0') * (num2[j] - '0');
             int sum = mul + result[i + j + 1];
@@ -42,7 +44,7 @@ void multiply(char *num1, char *num2)
         }
     }
 
-    int i = 0;
+    i = 0;
     while (i < len_result && result[i] == 0)
         i++;
 
@@ -63,7 +65,7 @@ void multiply(char *num1, char *num2)
  * @argc: number of arguments
  * @argv: array of arguments
  *
- * Return: 0 if successful,
+ * Return: 0 if successful, 98 otherwise
  */
 int main(int argc, char *argv[])
 {
