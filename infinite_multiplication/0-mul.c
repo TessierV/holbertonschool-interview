@@ -11,7 +11,7 @@
  */
 int is_digit(char s)
 {
-    return (s >= '0' && s <= '9');
+	return (s >= '0' && s <= '9');
 }
 
 /**
@@ -21,37 +21,37 @@ int is_digit(char s)
  */
 void multiply(char *num1, char *num2)
 {
-    int len_num1 = strlen(num1);
-    int len_num2 = strlen(num2);
-    int len_result = len_num1 + len_num2;
-    int *result = calloc(len_result, sizeof(int));
-    int i, j;
+	int len_num1 = strlen(num1);
+	int len_num2 = strlen(num2);
+	int len_result = len_num1 + len_num2;
+	int *result = calloc(len_result, sizeof(int));
+	int i, j;
 
-    for (i = len_num1 - 1; i >= 0; i--)
-    {
-        for (j = len_num2 - 1; j >= 0; j--)
-        {
-            int mul = (num1[i] - '0') * (num2[j] - '0');
-            int sum = mul + result[i + j + 1];
-            result[i + j] += sum / 10;
-            result[i + j + 1] = sum % 10;
-        }
-    }
+	for (i = len_num1 - 1; i >= 0; i--)
+	{
+		for (j = len_num2 - 1; j >= 0; j--)
+		{
+			int mul = (num1[i] - '0') * (num2[j] - '0');
+			int sum = mul + result[i + j + 1];
+			result[i + j] += sum / 10;
+			result[i + j + 1] = sum % 10;
+		}
+	}
 
-    i = 0;
-    while (i < len_result && result[i] == 0)
-        i++;
+	i = 0;
+	while (i < len_result && result[i] == 0)
+		i++;
 
-    if (i == len_result)
-        printf("0");
-    else
-    {
-        while (i < len_result)
-            printf("%d", result[i++]);
-    }
-    printf("\n");
+	if (i == len_result)
+		printf("0");
+	else
+	{
+		while (i < len_result)
+			printf("%d", result[i++]);
+	}
+	printf("\n");
 
-    free(result);
+	free(result);
 }
 
 /**
@@ -63,19 +63,19 @@ void multiply(char *num1, char *num2)
  */
 int main(int argc, char *argv[])
 {
-    if (argc != 3)
-    {
-        printf("Error\n");
-        return (98);
-    }
+	if (argc != 3)
+	{
+		printf("Error\n");
+		return (98);
+	}
 
-    if (!is_digit(argv[1]) || !is_digit(argv[2]))
-    {
-        printf("Error\n");
-        return (98);
-    }
+	if (!is_digit(argv[1]) || !is_digit(argv[2]))
+	{
+		printf("Error\n");
+		return (98);
+	}
 
-    multiply(argv[1], argv[2]);
+	multiply(argv[1], argv[2]);
 
-    return (0);
+	return (0);
 }
