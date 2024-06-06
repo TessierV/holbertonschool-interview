@@ -40,6 +40,7 @@ void multiply(char *num1, char *num2)
 		{
 			int mul = (num1[i] - '0') * (num2[j] - '0');
 			int sum = mul + result[i + j + 1];
+
 			result[i + j] += sum / 10;
 			result[i + j + 1] = sum % 10;
 		}
