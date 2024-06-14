@@ -122,10 +122,16 @@ This project implements an advanced binary search algorithm in C. The advanced_b
 This project involves creating a recursive function that queries the Reddit API, parses the titles of all hot articles, and prints a sorted count of given keywords (case-insensitive, delimited by spaces). For example, "Javascript" should count as "javascript", but "java" should not count as "javascript".
 <br><br>
 
-## 19 - Infinite Multiplication
+# 19- Infinite Multiplication
 
 ## Resume :
 This project contains a C program that multiplies two positive numbers provided as command-line arguments.
+<br><br>
+
+# 20- Rotate 2D Matrix
+
+## Resume :
+This project contains a function that rotates a given n x n 2D matrix 90 degrees clockwise in place.
 <br><br>
 
 <br/><hr>
