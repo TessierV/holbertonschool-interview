@@ -5,7 +5,6 @@
 /**
  * merge - merges the copied array into the original one
  * @array: updated array of integers to sort
- * @arrCopy: copy of the array
  * @left: beginning of array;
  * @right: end of array;
  * @mid: half point between left and right
@@ -55,7 +54,6 @@ void merge(int *array, int *arrCopy, int left, int right, int mid)
 /**
  * split - splits the array in half and calls merge()
  * @array: array to sort
- * @arrCopy: copy of the array to sort
  * @left: beggining of the array
  * @right: end of the array
  *
@@ -75,7 +73,6 @@ void split(int *array, int *arrCopy, int left, int right)
 
 /**
  * merge_sort - sorts an array of integers in ascending order
- *              using the Merge Sort algorithm
  * @array: array of integers to sort
  * @size: size of the array
  *
